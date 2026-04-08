@@ -1,21 +1,34 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+const pageTitle = "Blog";
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
 <Layout>
 	<body>
     <a href="/">Home</a>
-	<a href="/about/">About</a>
+	  <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
 
-  <h1>My Astro site</h1>
-  <h1>BLOG</h1>
+  <h1>{pageTitle}</h1>
   <h2>...about my new Astro site!</h2>
 
   <p>Este es el blog con entradas acerca de la experiencia de crear la pagina con Astros.</p>
+    <ul>
+      <li><a href="/posts/post-1/">Post 1</a></li>
+      <li><a href="/posts/post-2/">Post 2</a></li>
+      <li><a href="/posts/post-3/">Post 3</a></li>
+    </ul>
 </body>
 </Layout>
+</html>
